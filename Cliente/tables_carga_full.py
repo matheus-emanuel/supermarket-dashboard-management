@@ -48,7 +48,7 @@ def extract_data(table, engine, file_path):
                 processed_row[col] = value.read()
             else: 
                 processed_row[col] = value
-    data.append(processed_row)
+        data.append(processed_row)
     
     df = pd.DataFrame(data)
     
@@ -58,7 +58,7 @@ def extract_data(table, engine, file_path):
     file_path = f"{file_path}/{file_name}"
     df.to_parquet(path=file_path)
     
-    return file_name, file_name
+    return file_path, file_name
 
 # Enviar para GCS
 def upload_to_gcs(file_path, file_name, table):
@@ -76,6 +76,6 @@ if __name__ == "__main__":
     for TABLE in TABLE_LIST:
         try:
             file_path, file_name = extract_data(TABLE, engine, FILE_PATH)
-            # upload_to_gcs(file_path, file_name, TABLE)
+            upload_to_gcs(file_path, file_name, TABLE)
         except Exception as e:
             print(f"Erro: {e}")
