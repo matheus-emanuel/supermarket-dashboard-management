@@ -1,0 +1,32 @@
+# Arquivos do Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ambientes virtuais
+venv/
+.env/
+
+# Configuração do editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+.DS_Store
+
+# Arquivos do sistema operacional
+Thumbs.db
+
+# Arquivos .parquet / Banco
+.parquet
+
+# Pastas a não serem enviadas
+Banco/
+Senhas/
+Data/
+Arquivos_xsd/
+.venv/

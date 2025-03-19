@@ -1,0 +1,60 @@
+{
+    "tbestoquesdet": {
+        "filter_by_date": true,
+        "column_to_filter": "DATA",
+        "filter_type": "last_day"
+    },
+
+    "tbmercadorias": {
+        "filter_by_date": false,
+        "column_to_filter": null,
+        "filter_type": "all_data"
+    },
+
+    "tbprodutos": {
+        "filter_by_date": false,
+        "column_to_filter": null,
+        "filter_type": "all_data"
+    },
+
+    "tbforn":{
+        "filter_by_date": false,
+        "column_to_filter": null,
+        "filter_type": "all_data"
+    },
+
+    "tblogpdv":{
+        "filter_by_date": true,
+        "column_to_filter": "DATA",
+        "filter_type": "last_day"
+    },
+
+    "tbtributacao":{
+        "filter_by_date": false,
+        "column_to_filter": null,
+        "filter_type": "all_data"
+    },
+
+    "tbvendasbk":{
+        "filter_by_date": true,
+        "column_to_filter": "DATA",
+        "filter_type": "last_day"
+    },
+
+    "tbvendasdet":{
+        "filter_by_date": true,
+        "column_to_filter": "DATA",
+        "filter_type": "last_day"
+    },
+
+    "tbvendaspag":{
+        "filter_by_date": true,
+        "column_to_filter": "DATA",
+        "filter_type": "last_day"
+    },
+    "tbvendas":{
+        "filter_by_date": true,
+        "column_to_filter": "DATA",
+        "filter_type": "last_day"
+    }
+}
