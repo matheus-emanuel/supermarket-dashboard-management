@@ -30,3 +30,7 @@ Senhas/
 Data/
 Arquivos_xsd/
 .venv/
+
+# Terraform
+.Terraform/
+.terraform.lock.hcl
