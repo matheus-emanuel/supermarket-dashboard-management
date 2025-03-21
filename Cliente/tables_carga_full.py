@@ -27,7 +27,7 @@ DB_USER = "sysdba"
 DB_PASSWORD = "masterkey"
 DB_URL = f'firebird+fdb://{DB_USER}:{DB_PASSWORD}@localhost:3050/{DB_PATH}'
 
-BUCKET_NAME = "bronze-layer"
+BUCKET_NAME = "lambda-architeture-on-gcp-firebird-db"
 CREDENTIALS_PATH = "C:/Users/freit/OneDrive/Documentos/Estudos/TCC/Senhas/1.JSON/management-zegordo-sa-credentials.json"  # Chave de autenticação do GCP
 engine = create_engine(DB_URL)
 Session = sessionmaker(bind=engine)
@@ -62,7 +62,7 @@ def extract_data(table, engine, file_path):
 
 # Enviar para GCS
 def upload_to_gcs(file_path, file_name, table):
-    destination_blob = f'firbird-db/{table}/{file_name}'
+    destination_blob = f'ingestion/{table}/{file_name}'
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = CREDENTIALS_PATH
     
     client = storage.Client()
