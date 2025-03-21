@@ -44,3 +44,19 @@ resource "google_bigquery_dataset" "creation_bigquery_dataset" {
   }
   
 }
+
+resource "google_bigquery_table" "raw_tables" {
+  for_each = toset(var.table_name)
+  
+  dataset_id = google_bigquery_dataset.creation_bigquery_dataset[each.value].dataset_id
+  table_id   = "raw-${each.value}"
+
+  external_data_configuration {
+    autodetect    = true
+    source_format = "PARQUET"
+
+    source_uris = [
+      "gs://${google_storage_bucket.create_bucket_ingestion.name}/ingestion/${each.value}/*.parquet",
+    ]
+  }
+}
