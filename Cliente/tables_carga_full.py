@@ -7,16 +7,7 @@ from google.cloud import storage
 
 # Configurações
 TABLE_LIST = [
-    'tbestoquesdet',
-    'tbmercadorias',
-    'tbprodutos',
-    'tbforn',
-    'tblogpdv',
-    'tbtributacao',
-    'tbvendasbk',
-    'tbvendasdet',
-    'tbvendaspag',
-    'tbvendas'
+    "tbentradasdet"
 ]
 
 FILE_PATH = f"C:/Users/freit/OneDrive/Documentos/Estudos/TCC/Data"
