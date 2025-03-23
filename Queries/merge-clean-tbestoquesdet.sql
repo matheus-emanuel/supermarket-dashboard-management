@@ -14,7 +14,7 @@ USING(
     CURRENT_TIMESTAMP() AS inserted_at,
     CURRENT_TIMESTAMP() AS updated_at
   FROM `lambda-architeture-on-gcp.tbestoquesdet.raw-tbestoquesdet`
-  WHERE data <= CURRENT_DATE()-7
+  WHERE data >= CURRENT_DATE()-7
   QUALIFY ROW_NUMBER() OVER(partition by data, produto, movimento order by updated_at DESC) = 1
 ) AS new_data
 ON old_data.id = new_data.id
